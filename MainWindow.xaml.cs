@@ -242,6 +242,7 @@ namespace TextureRescaler {
 			Next();
 		}
 		void KeepImpl() {
+			if (Index < 0 || Index >= files.Count) return;
 			var src = files[Index];
 			var dest = GetDestination();
 			if (dest is null) return;
